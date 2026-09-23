@@ -17,13 +17,21 @@
   border: none;
   background: transparent;
   color: inherit;
-  font-size: 16px;
   opacity: 0.7;
   transition: opacity var(--animation-duration-2x);
   cursor: pointer;
   display: flex;
   align-items: center;
   justify-content: center;
+}
+
+.stisb--button:first-child i {
+  font-size: 13px !important;
+  transform: translateX(8px);
+}
+
+.stisb--button:last-child i {
+  font-size: 12px !important;
 }
 
 .stisb--button:hover {
