@@ -1,0 +1,51 @@
+.stisb--buttons {
+  position: fixed;
+  right: 0.25em;
+  bottom: 0.125em;
+  display: flex;
+  flex-direction: row;
+  gap: 0;
+  z-index: 999;
+}
+
+.stisb--button {
+  position: relative;
+  padding: 0;
+  margin: 0;
+  width: 32px;
+  height: 32px;
+  border: none;
+  background: transparent;
+  color: inherit;
+  font-size: 16px;
+  opacity: 0.7;
+  transition: opacity var(--animation-duration-2x);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stisb--button:hover {
+  opacity: 1;
+  filter: brightness(1.2);
+}
+
+/*
+ * Match ST-WorldInfoInfo's anchor behavior, mirrored to
+ * the opposite (right-hand) side of #qr--bar.
+ */
+@supports (position-anchor: --x) {
+  #qr--bar {
+    anchor-name: --qr-bar;
+  }
+
+  .stisb--buttons {
+    position-anchor: --qr-bar;
+    right: anchor(right);
+    top: anchor(center);
+    left: auto;
+    bottom: auto;
+    transform: translate(-8px, -35%);
+  }
+}
