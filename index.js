@@ -15,12 +15,11 @@ function insertAtCursor(text) {
     textarea.dispatchEvent(new Event('input', { bubbles: true }));
 }
 
-function createButton(iconClass, text, title) {
+function createButton(iconClass, text, ariaLabel) {
     const button = document.createElement('button');
     button.type = 'button';
     button.className = 'stisb--button';
-    button.title = title;
-    button.setAttribute('aria-label', title);
+    button.setAttribute('aria-label', ariaLabel);
 
     const icon = document.createElement('i');
     icon.className = iconClass;
