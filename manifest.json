@@ -1,0 +1,11 @@
+{
+  "display_name": "Input Symbol Buttons",
+  "loading_order": 100,
+  "requires": [],
+  "optional": [],
+  "js": "index.js",
+  "css": "style.css",
+  "author": "Custom",
+  "version": "1.0.0",
+  "homePage": ""
+}
